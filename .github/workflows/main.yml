@@ -1,4 +1,4 @@
-name: CD-Liara-client
+name: CD-Liara-dashboard
 on:
   push:
     branches:
