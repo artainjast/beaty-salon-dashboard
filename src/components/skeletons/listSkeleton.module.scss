@@ -1,0 +1,25 @@
+.listSkeleton {
+    position: relative;
+    &::before{
+    content: "";
+    position: absolute;
+    background: linear-gradient(90deg,transparent,hsla(0,0%,100%,.9),transparent);
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -webkit-animation: loading .6s infinite;
+    animation: loading .6s infinite;
+    }
+}
+
+
+@keyframes loading {
+    0% {
+        transform: skewX(-10deg) translateX(-100%)
+    }
+
+    to {
+        transform: skewX(-10deg) translateX(200%)
+    }
+}

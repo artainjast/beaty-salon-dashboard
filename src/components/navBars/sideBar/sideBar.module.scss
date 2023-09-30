@@ -1,0 +1,25 @@
+.closeButton{
+    position: relative;
+    height: 30px;
+    width: 30px;
+    &::after{
+        content: "";
+        width: 1px;
+        height: 20px;
+        background-color:#999999;
+        transform: rotateZ(45deg);;
+        position: absolute;
+        top: 0%;
+        left: 45%;
+    }
+    &::before{
+        content: "";
+        width: 1px;
+        height: 20px;
+        background-color: #999999;
+        transform: rotateZ(-45deg);;
+        position: absolute;
+       top: 0%;
+        left: 45%;
+    }
+}

@@ -1,0 +1,1 @@
+export const SUB_SERVICE_URL = '/sub-service';
