@@ -3,10 +3,7 @@ import Router from 'next/router';
 import { toast } from 'react-toastify';
 
 const axiosFetch = axios.create({
-  baseURL:
-    process.env.NODE_ENV === 'production'
-      ? process.env.NEXT_PUBLIC_BACKEND_URL
-      : process.env.NEXT_PUBLIC_BACKEND_URL_DEMO,
+  baseURL: process.env.NEXT_PUBLIC_BACKEND_URL
 });
 
 axiosFetch.interceptors.request.use(
