@@ -19,13 +19,12 @@ const SideBar = ({ isSideBarOpen, sideBarHandler }: any) => {
       id: 1,
       title: 'درخواست ها',
       isMain: true,
-      url: '/',
       logo: SupportLogo,
       subMenu: [
         {
           id: 11,
           title: 'لیست درخواست  ها',
-          url: '/'
+          url: '/Counseling'
         },
       ]
     },
@@ -123,7 +122,7 @@ const SideBar = ({ isSideBarOpen, sideBarHandler }: any) => {
   return (
     <div
       className={clsx(
-        'dark:bg-slate-800 bg-slate-100 fixed top-0 right-0 flex flex-col h-screen w-8/12 z-10 transition-transform',
+        'bg-slate-100 fixed top-0 right-0 flex flex-col h-screen w-8/12 z-10 transition-transform',
         { 'translate-x-0': isSideBarOpen },
         { 'translate-x-full': !isSideBarOpen }
       )}

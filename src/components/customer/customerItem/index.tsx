@@ -9,7 +9,7 @@ interface Props {
 const CustomerItem = ({customer}: Props) => {
     const { id, firstName, lastName, phoneNumber } = transformCustomerData(customer); ;
     return (
-      <div className='flex flex-row dark:odd:bg-slate-800 odd:bg-stone-300 items-center p-2'>
+      <div className='flex flex-row border-b border-b-slate-400 items-center p-2'>
         <p className='w-2 ml-4 text-sm'>{id}</p>
         <p className='w-2/4 ml-1 text-sm truncate'>{firstName + ' ' + lastName}</p>
         <p className='w-1/4 ml-1 text-sm '>{phoneNumber}</p>

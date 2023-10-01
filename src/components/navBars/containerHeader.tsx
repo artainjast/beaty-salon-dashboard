@@ -6,7 +6,7 @@ import style from "./containerHeader.module.scss"
 import clsx from 'clsx';
 const ContainerHeader = ({ sideBarHandler }:any) => {
   return (
-    <div className='dark:bg-slate-600 bg-slate-200 shadow-md w-full flex items-center px-5 justify-between h-11 absolute top-0 left-0'>
+    <div className='bg-slate-50 w-full flex items-center px-5 justify-between h-11'>
       <div onClick={sideBarHandler} className='w-10 h-10 flex items-center justify-center'>
         <span className={clsx(style.hamburger_menu, 'w-4')} />
       </div>
@@ -15,7 +15,7 @@ const ContainerHeader = ({ sideBarHandler }:any) => {
       </div>
 
       {/* <p className='w-1/3 text-left'>profile</p> */}
-      <Image src={userProfile} className='w-8 h-8 dark:bg-slate-400 text-cyan-300' alt={'profile'} />
+      <Image src={userProfile} className='w-8 h-8 text-cyan-300' alt={'profile'} />
     </div>
   );
 };

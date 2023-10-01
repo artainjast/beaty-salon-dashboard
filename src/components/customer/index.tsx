@@ -44,20 +44,18 @@ const Customer = () => {
     }
    return (
      <>
-       <div className='flex flex-col'>
+       <div className='flex flex-col py-4 px-5 mt-2 bg-neutral-50'>
          <div className=''>
-           <div className='flex flex-row dark:bg-slate-500 bg-slate-100 py-3 px-2  rounded-t-md border border-slate-400'>
+           <div className='flex flex-row border-b border-b-neutral-500 bg-neutral-100 py-4 px-4'>
              <p className='w-2 ml-3'>#</p>
              <p className='w-2/4 ml-3'>نام</p>
              <p className='w-1/4 '>شماره</p>
            </div>
-           <div className='border border-slate-500 rounded-b-md'>
-             {!isEmpty(customers) &&
+            {!isEmpty(customers) &&
                !isPending &&
                customers.map((item: CustomerType) => {
                  return <CustomerItem  customer={item} />;
-               })}
-           </div>
+            })}
          </div>
          <div className={clsx('flex flex-row justify-between mt-2', { 'flex-row-reverse': !isAbleToIncreaseOffset })}>
            {isAbleToIncreaseOffset && (

@@ -10,7 +10,7 @@ import ListSkeleton from '../skeletons/ListSkeleton';
 import CounselingItem from './counselingItem';
 
 
-const Counseling = () => {
+export function CounselingPage  ()  {
     const [offset, setOffset] = useState(0);
     const [counselings, setCounselings] = useState<Array<CounselingType>>();
     const [isPending, setIsPending] = useState(true);
@@ -48,7 +48,7 @@ const Counseling = () => {
       <>
         <div className='flex flex-col'>
           <div className=' rounded-md'>
-            <div className='flex flex-row dark:bg-slate-700 bg-slate-100 shadow-md py-3 px-2'>
+            <div className='flex flex-row bg-slate-100 shadow-md py-3 px-2'>
               <p className='w-2 ml-3'>#</p>
               <p className='w-1/4 ml-3'>نام</p>
               <p className='w-1/4 ml-3'>شماره</p>
@@ -76,5 +76,3 @@ const Counseling = () => {
       </>
     );
 };
-
-export default Counseling;

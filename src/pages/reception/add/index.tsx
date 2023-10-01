@@ -3,7 +3,7 @@ import React from 'react';
 
 const ReceptionAddPage = () => {
     return (
-        <div>
+        <div className='mt-2'>
            <ReceptionAdd />
         </div>
     );

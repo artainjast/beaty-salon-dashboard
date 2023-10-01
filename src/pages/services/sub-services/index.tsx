@@ -4,10 +4,10 @@ import React from 'react';
 
 const SubServicePage = () => {
     return (
-        <>
+        <div className='mt-2'>
             <SubServiceAdd />
             <SubService/>
-        </>
+        </div>
     );
 };
 

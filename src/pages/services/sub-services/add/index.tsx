@@ -3,9 +3,9 @@ import React from 'react';
 
 const SubServiceAddPage = () => {
     return (
-        <>
+        <div className='mt-2'>
             <SubServiceAdd/>
-        </>
+        </div>
     );
 };
 

@@ -38,7 +38,7 @@ const CustomerAdd = () => {
           })
     }
     return (
-      <div className='rounded-md w-full p-2 dark:bg-slate-500 bg-slate-100 mb-5'>
+      <div className='w-full px-5 py-4 bg-neutral-50'>
         <form className='flex flex-col'>
           <TextField className='rounded p-2 mb-2' placeholder='نام مشتری را وارد کنید.' onChange={setFirstName} />
           <TextField className='rounded p-2 mb-2' placeholder='نام خانوادگی را وارد کنید.' onChange={setLastName} />

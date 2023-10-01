@@ -15,7 +15,7 @@ import ListSkeleton from '../skeletons/ListSkeleton';
 import CustomerAdd from '../customer/add';
 import SubServiceAdd from '../service/subService/add';
   
-const Reception = ({ isCustomerModalOpen  , setCustomerModal , isServiceModalOpen , setServiceModal}:any) => {
+export function ReceptionPage  ({ isCustomerModalOpen  , setCustomerModal , isServiceModalOpen , setServiceModal}:any) {
   const [offset, setOffset] = useState(0);
   const [receptions, setReceptions] = useState<Array<ReceptionType>>();
   const [isPending, setIsPending] = useState(true);
@@ -60,15 +60,16 @@ const Reception = ({ isCustomerModalOpen  , setCustomerModal , isServiceModalOpe
   }
   return (
     <>
-      <div className='flex flex-col'>
+      <div className='flex flex-col py-4 px-5 mt-2 bg-neutral-50'>
         <div>
-          <div className='flex flex-row dark:bg-slate-700 bg-slate-100 shadow-md py-3 px-2  rounded-t-md border border-slate-400'>
+          <div className='flex flex-row border-b border-b-neutral-500 bg-neutral-100 py-4 px-4'>
             <p className='w-2 ml-3'>#</p>
             <p className='w-1/4 ml-3'>تاریخ</p>
             <p className='w-1/4 '>هزینه</p>
             <p className='w-1/4 ml-3'>توضیحات</p>
+            <p className='w-1/6'>بیشتر</p>
           </div>
-          <div className='border border-slate-500 rounded-b-md'>
+          <div className=''>
             {!isEmpty(receptions) &&
               !isPending &&
               receptions.map((item: ReceptionType) => {
@@ -108,7 +109,7 @@ const Reception = ({ isCustomerModalOpen  , setCustomerModal , isServiceModalOpe
               <p className='text-stone-800'>شماره همراه</p>
               <p className='text-stone-800'>{modalReceptionData?.customer.phoneNumber}</p>
             </div>
-            <div className='flex justify-between mb-2 py-2 border-b dark:bg-slate-800 border-b-slate-500'>
+            <div className='flex justify-between mb-2 py-2 border-b border-b-slate-500'>
               <p className='text-stone-800'>تاریخ مراجعه</p>
               <p className='text-stone-800'>
                 {modalReceptionData?.reception?.createdAt &&
@@ -156,4 +157,3 @@ const Reception = ({ isCustomerModalOpen  , setCustomerModal , isServiceModalOpe
   );
 };
 
-export default Reception;

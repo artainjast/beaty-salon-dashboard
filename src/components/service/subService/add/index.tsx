@@ -24,7 +24,7 @@ const SubServiceAdd = () => {
         })
     }
     return (
-        <div className='rounded-md w-full p-2 dark:bg-slate-500 bg-slate-100 mb-5'>
+        <div className='w-full py-4 px-5 bg-neutral-50'>
           <form className='flex flex-col'>
             <TextField className='rounded p-2 mb-2' placeholder='نام خدمت را وارد کنید.' onChange={setName} />
             <CurrencyInput

@@ -87,7 +87,7 @@ const ReceptionAdd = ({openCustomerModal , openServiceModal}:any) => {
   }
 
   return (
-    <div className='rounded-md w-full p-2 dark:bg-slate-500 bg-slate-100 shadow-md mb-5'>
+    <div className='w-full px-5 py-4 bg-neutral-50'>
       <form onSubmit={addReception}>
         <div className='flex flex-row justify-between items-center'>
           <CustomerSelect className='my-3 w-10/12' reference={customerSelected} />
@@ -110,7 +110,7 @@ const ReceptionAdd = ({openCustomerModal , openServiceModal}:any) => {
           </Button>
         </div>
         <TextField 
-          className='rounded w-full h-10 p-2 text-xs dark:bg-slate-50 ' 
+          className='rounded w-full h-10 p-2 text-xs' 
           register={register}
           name='description'
           placeholder='توضیحات (اختیاری)'

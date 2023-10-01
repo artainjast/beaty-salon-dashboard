@@ -14,9 +14,9 @@ const PageContainer = ({ children, className }: Props) => {
     }
 
     return (
-      <div className={clsx('p-4 pt-14', className)}>
+      <div className={clsx('max-w-lg w-full flex flex-col mx-auto relative', className)}>
         <ContainerHeader sideBarHandler={setIsSideBarOpen} />
-        <SideBar isSideBarOpen={isSideBarOpen}  sideBarHandler={closeSideBar} />
+        <SideBar isSideBarOpen={isSideBarOpen} sideBarHandler={closeSideBar} />
         {children}
       </div>
     );
