@@ -72,6 +72,7 @@ const Login = () => {
 };
 
 Login.hideNavbar = true;
+Login.isAuth = true;
 
 export default Login;
 

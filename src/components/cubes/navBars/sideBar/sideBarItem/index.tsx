@@ -31,9 +31,9 @@ const SideBarItem = ({ menuBar, sideBarHandler }: Props) => {
     <div className='p-2 px-3'>
       {menuBar.subMenu && menuBar.isActive !== false ? (
         <div>
-          <div className='flex flex-row'>
-              <Icon name={menuBar.logo ? menuBar.logo : 'home'} size={24} className='ml-2' />
-            <p className={clsx('text-lg', { 'text-slate-500': isSubMenuExpand })} onClick={toggleMenu}>
+          <div className='flex flex-row text-neutral-700 items-center'>
+            {menuBar.logo && <Icon name={menuBar.logo} size={18} className='ml-2' />}
+            <p className={clsx( { 'text-slate-500': isSubMenuExpand })} onClick={toggleMenu}>
               {menuBar.title}
             </p>
           </div>
@@ -49,9 +49,10 @@ const SideBarItem = ({ menuBar, sideBarHandler }: Props) => {
       ) : (
         menuBar.url && (
           <div className='flex flex-row items-center'>
-            {menuBar.url === route && <p className='ml-2'>{'-->'}</p>}
-            <div key={menuBar.id} onClick={routerHandler}>
-              <p className={clsx({ 'text-lg': menuBar.isMain, 'text-sm': !menuBar.isMain })}>{menuBar.title}</p>
+            {menuBar.url === route && <Icon name='arrow-right' size={12} className='rotate-180 ml-2' />}
+              <div className='flex items-center gap-2' key={menuBar.id} onClick={routerHandler}>
+              {menuBar.logo && <Icon name={menuBar.logo} />}
+              <p className={clsx( {'text-sm': !menuBar.isMain })}>{menuBar.title}</p>
             </div>
           </div>
         )

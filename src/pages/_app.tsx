@@ -1,4 +1,5 @@
 import '@/styles/globals.css'
+import '@/styles/font-icon.css'
 import type { AppProps } from 'next/app'
 import styles from '@/styles/Home.module.css';
 import 'react-toastify/dist/ReactToastify.css';

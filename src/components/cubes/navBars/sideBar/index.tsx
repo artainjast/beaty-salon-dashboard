@@ -9,23 +9,11 @@ import CustomerLogo from '../../../../assets/images/customer.png';
 import ReceptionLogo from '../../../../assets/images/receptionist.png';
 import { Icon } from '../../Icon';
 import { MenuBarItem } from '@/types';
+import { hasToken } from '@/utils';
 const SideBar = ({ isSideBarOpen, sideBarHandler }: any) => {
 
-  const menuItems : MenuBarItem[] = [
-    {
-      id: 1,
-      title: 'درخواست ها',
-      isMain: true,
-      logo: 'support' ,
-      subMenu: [
-        {
-          id: 11,
-          title: 'لیست درخواست  ها',
-          url: '/Counseling'
-        },
-      ]
-    },
-    {
+  const menuItems: MenuBarItem[] = [
+  {
       id: 2,
       title: 'پذیرش ',
       isMain: true,
@@ -44,10 +32,59 @@ const SideBar = ({ isSideBarOpen, sideBarHandler }: any) => {
       ]
     },
     {
+      id: 4,
+      title: 'مشتریان',
+      isMain: true,
+      logo: 'girl-face-outline',
+      subMenu: [
+        {
+          id: 41,
+          title: 'لیست مشتریان',
+          url: '/customer'
+        },
+        {
+          id: 42,
+          title: 'افزودن مشتری',
+          url: '/customer/add'
+        }
+      ]
+    },
+    {
+      id: 1,
+      title: 'درخواست ها',
+      isMain: true,
+      logo: 'support' ,
+      subMenu: [
+        {
+          id: 11,
+          title: 'لیست درخواست  ها',
+          url: '/Counseling'
+        },
+      ]
+    },
+    
+    
+    {
+          id: 7,
+          title: 'نوبت دهی',
+          logo : 'schedule-outline',
+          subMenu: [
+            {
+              id: 71,
+              title: 'لیست نوبت ',
+              url: '/reservation/list'
+            },
+            {
+              id: 72,
+              title: 'افزودن نوبت دهی',
+              url: '/reservation/add'
+            }
+          ]
+    },
+        {
       id: 3,
       title: 'سرویس‌ها',
       isMain: true,
-      logo: 'girl-face-outline',
       subMenu: [
         {
           id: 31,
@@ -81,25 +118,8 @@ const SideBar = ({ isSideBarOpen, sideBarHandler }: any) => {
               url: '/services/sub-services/add'
             }
           ]
-        }
-      ]
-    },
-    {
-      id: 4,
-      title: 'مشتریان',
-      isMain: true,
-      logo: 'girl-face-outline',
-      subMenu: [
-        {
-          id: 41,
-          title: 'لیست مشتریان',
-          url: '/customer'
         },
-        {
-          id: 42,
-          title: 'افزودن مشتری',
-          url: '/customer/add'
-        }
+        
       ]
     },
     {
@@ -108,16 +128,19 @@ const SideBar = ({ isSideBarOpen, sideBarHandler }: any) => {
       isMain: true,
       logo: 'photo-library-outline',
       url: '/posts'
-    },
-    {
+    }
+   
+  ];
+
+  if (!hasToken()) menuItems.push({
       id: 5,
       title: 'ورود',
       isMain: true,
       url: '/user/login',
       logo: 'login',
-    },
-   
-  ];
+    })
+    
+
   return (
     <div
       className={clsx(
@@ -126,12 +149,12 @@ const SideBar = ({ isSideBarOpen, sideBarHandler }: any) => {
         { 'translate-x-full': !isSideBarOpen }
       )}
     >
-      <div className='h-10 py-2 flex flex-row justify-between mx-3 border-b border-slate-400'>
-        <Link href='/'>
-          <Icon name='home' size={24} className='text-neutral-800' />
+      <div className='h-10 py-2 flex flex-row justify-between items-center mx-3 border-b border-slate-400'>
+        <Link className='flex gap-2' href='/'>
+          <Icon name='home' size={18} className='text-neutral-800' />
           <p>خانه</p>
         </Link>
-        <div className={style.closeButton} onClick={sideBarHandler}></div>
+        <Icon name='close' size={18} className='text-neutral-800' onClick={sideBarHandler}/>
       </div>
       <div className='mt-4'>
         {menuItems.map((item) => {
