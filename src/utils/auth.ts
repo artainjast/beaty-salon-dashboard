@@ -1,3 +1,5 @@
+import { isServerSide } from "./ssr";
+
 export const hasToken = () => {
-    return !!localStorage.getItem('accessToken');
+    return !isServerSide && !!localStorage.getItem('accessToken');
 }

@@ -10,7 +10,7 @@ import { toFaCurrency } from '@/utils/number';
 import React, { useEffect, useRef, useState } from 'react';
 import { toast } from 'react-toastify';
 import PaymentComponent from '../paymentButton';
-import { useForm, useFormContext } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import VoucherForm from '../voucherForm';
 
 const ReceptionAdd = ({openCustomerModal , openServiceModal}:any) => {

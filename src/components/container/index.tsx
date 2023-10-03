@@ -17,6 +17,9 @@ const PageContainer = ({ children, className , hideNavbar , isAuth }: Props) => 
     const closeSideBar = () => {
         setIsSideBarOpen(false);
     }
+    if (!hasToken()) {
+      router.push('/user/login')
+    }
     if (isAuth) {
       hasToken() && router.push('/')
     }
