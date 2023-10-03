@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React, { ReactNode, useState } from 'react';
 import ContainerHeader from '../cubes/navBars/containerHeader';
 import SideBar from '../cubes/navBars/sideBar';
-import { hasToken } from '@/utils';
+import { hasToken, isServerSide } from '@/utils';
 import { useRouter } from 'next/router';
 
 interface Props {
@@ -18,10 +18,10 @@ const PageContainer = ({ children, className , hideNavbar , isAuth }: Props) => 
         setIsSideBarOpen(false);
     }
     if (!hasToken()) {
-      router.push('/user/login')
+      !isServerSide && router.push('/user/login')
     }
     if (isAuth) {
-      hasToken() && router.push('/')
+      !isServerSide && hasToken() && router.push('/')
     }
     return (
       <div className={clsx('max-w-lg w-full flex flex-col mx-auto overflow-x-hidden relative', className)}>
