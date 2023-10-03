@@ -1,3 +1,4 @@
+import { IconNameType } from "@/components/cubes/Icon/IconNameType";
 
 export interface StaticImageData {
   src: string;
@@ -20,5 +21,5 @@ export interface MenuBarItem {
   isMain?: boolean;
   isActive?: boolean;
   subMenu?: Array<MenuBarItem>;
-  logo?: string | StaticImport;
+  logo?: IconNameType;
 }

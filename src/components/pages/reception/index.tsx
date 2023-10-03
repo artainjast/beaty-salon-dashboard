@@ -6,12 +6,12 @@ import { isEmpty } from '@/utils/helpers';
 import clsx from 'clsx';
 import Router  from 'next/router';
 import React, { useEffect, useState } from 'react';
-import Button from '../cubes/Button';
-import Modal from '../modals';
+import Button from '../../cubes/Button';
+import Modal from '../../modals';
 import ReceptionItem from './receptionItem';
-import style from "../navBars/sideBar/sideBar.module.scss"
+import style from "../../cubes/navBars/containerHeader.module.scss"
 import { toFa, toFaCurrency } from '@/utils/number';
-import ListSkeleton from '../skeletons/ListSkeleton';
+import ListSkeleton from '../../skeletons/ListSkeleton';
 import CustomerAdd from '../customer/add';
 import SubServiceAdd from '../service/subService/add';
   

@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image'
-import Logo from '../../../assets/images/logo.svg'
-import userProfile from '../../../assets/images/userProfile.png';
+import Logo from '~/assets/images/logo.svg'
+import userProfile from '~/assets/images/userProfile.png';
 import style from "./containerHeader.module.scss"
 import clsx from 'clsx';
 const ContainerHeader = ({ sideBarHandler }:any) => {

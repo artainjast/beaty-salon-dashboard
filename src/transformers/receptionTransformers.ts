@@ -1,6 +1,6 @@
 import { ReceptionDetailType } from '@/types/Reception';
 import { ReceptionType } from "@/types/Reception";
-import { SubServiceType } from '@/types/subService';
+import { SubServiceType } from '@/types/SubService';
 import { transformCustomerData } from './customerTransformer';
 import { transformSubServiceData } from './subServiceTransformer';
 import { cleanObject } from '@/utils';

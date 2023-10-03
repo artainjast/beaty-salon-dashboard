@@ -1,5 +1,5 @@
-import Customer from '@/components/customer';
-import CustomerAdd from '@/components/customer/add';
+import Customer from '@/components/pages/customer';
+import CustomerAdd from '@/components/pages/customer/add';
 import React from 'react';
 
 const CustomerPage = () => {

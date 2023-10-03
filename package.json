@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "tsc": "tsc --noEmit"
+    "tsc": "tsc --noEmit",
+    "crawlFontIcon": "node ./scripts/crawlFontIcon"
+
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",

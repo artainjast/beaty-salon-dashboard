@@ -7,19 +7,16 @@ import ServiceLogo from '../../../../assets/images/service.png';
 import SupportLogo from '../../../../assets/images/support.png';
 import CustomerLogo from '../../../../assets/images/customer.png';
 import ReceptionLogo from '../../../../assets/images/receptionist.png';
+import { Icon } from '../../Icon';
+import { MenuBarItem } from '@/types';
 const SideBar = ({ isSideBarOpen, sideBarHandler }: any) => {
 
-  const menuItems = [
-    // {
-    //   id: 1,
-    //   title: 'خانه',
-    //   url: '/'
-    // },
+  const menuItems : MenuBarItem[] = [
     {
       id: 1,
       title: 'درخواست ها',
       isMain: true,
-      logo: SupportLogo,
+      logo: 'support' ,
       subMenu: [
         {
           id: 11,
@@ -32,7 +29,7 @@ const SideBar = ({ isSideBarOpen, sideBarHandler }: any) => {
       id: 2,
       title: 'پذیرش ',
       isMain: true,
-      logo:ReceptionLogo ,
+      logo:'recipt-outline' ,
       subMenu: [
         {
           id: 21,
@@ -50,7 +47,7 @@ const SideBar = ({ isSideBarOpen, sideBarHandler }: any) => {
       id: 3,
       title: 'سرویس‌ها',
       isMain: true,
-      logo: ServiceLogo,
+      logo: 'girl-face-outline',
       subMenu: [
         {
           id: 31,
@@ -91,7 +88,7 @@ const SideBar = ({ isSideBarOpen, sideBarHandler }: any) => {
       id: 4,
       title: 'مشتریان',
       isMain: true,
-      logo: CustomerLogo,
+      logo: 'girl-face-outline',
       subMenu: [
         {
           id: 41,
@@ -109,26 +106,31 @@ const SideBar = ({ isSideBarOpen, sideBarHandler }: any) => {
       id: 6,
       title: 'پست ها',
       isMain: true,
+      logo: 'photo-library-outline',
       url: '/posts'
     },
     {
       id: 5,
       title: 'ورود',
       isMain: true,
-      url: '/user/login'
+      url: '/user/login',
+      logo: 'login',
     },
    
   ];
   return (
     <div
       className={clsx(
-        'bg-slate-100 fixed top-0 right-0 flex flex-col h-screen w-8/12 z-10 transition-transform',
+        'bg-slate-100 absolute top-0 right-0 flex flex-col h-screen w-8/12 z-10 transition-transform',
         { 'translate-x-0': isSideBarOpen },
         { 'translate-x-full': !isSideBarOpen }
       )}
     >
       <div className='h-10 py-2 flex flex-row justify-between mx-3 border-b border-slate-400'>
-        <Link href='/'>خانه</Link>
+        <Link href='/'>
+          <Icon name='home' size={24} className='text-neutral-800' />
+          <p>خانه</p>
+        </Link>
         <div className={style.closeButton} onClick={sideBarHandler}></div>
       </div>
       <div className='mt-4'>

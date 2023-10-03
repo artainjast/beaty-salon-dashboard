@@ -1,4 +1,4 @@
-import { CounselingPage } from '@/components/counseling';
+import { CounselingPage } from '@/components/pages/counseling';
 import React from 'react';
 
 const Counseling = () => {

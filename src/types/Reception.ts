@@ -1,5 +1,5 @@
 import { CustomerType } from './Customer';
-import { SubServiceType } from "./subService";
+import { SubServiceType } from "./SubService";
 
 export interface ReceptionType {
   id: number;

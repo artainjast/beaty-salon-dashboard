@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { DropzoneArea } from 'material-ui-dropzone';
 import axiosFetch from '@/api/axios';
-import Button from '../cubes/Button';
-import TextField from '../cubes/TextField';
+import Button from '../../cubes/Button';
+import TextField from '../../cubes/TextField';
 import { toast } from 'react-toastify';
 
 const AddInstagramPostForm = () => {

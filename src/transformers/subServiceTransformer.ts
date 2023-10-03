@@ -1,4 +1,4 @@
-import { SubServiceType } from '@/types/subService';
+import { SubServiceType } from '@/types/SubService';
 
 export const transformSubServiceData = (data: any): SubServiceType => {
   

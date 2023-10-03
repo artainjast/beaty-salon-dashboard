@@ -2,7 +2,7 @@ import axiosFetch from '@/api/axios';
 import { SUB_SERVICE_URL } from '@/api/subService';
 import { useDebounceFn } from '@/hooks/useDebounceFn';
 import { transformSubServiceData } from '@/transformers/subServiceTransformer';
-import { SubServiceType } from '@/types/subService';
+import { SubServiceType } from '@/types/SubService';
 import { toFaCurrency } from '@/utils/number';
 import React, { useEffect, useState } from 'react';
 import Select2 from '.';

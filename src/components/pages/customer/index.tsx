@@ -6,8 +6,8 @@ import { isEmpty } from '@/utils/helpers';
 import clsx from 'clsx';
 import  Router  from 'next/router';
 import React, { useEffect, useState } from 'react';
-import Button from '../cubes/Button';
-import ListSkeleton from '../skeletons/ListSkeleton';
+import Button from '../../cubes/Button';
+import ListSkeleton from '../../skeletons/ListSkeleton';
 import CustomerItem from './customerItem';
 const Customer = () => {
     const [offset, setOffset] = useState(0);

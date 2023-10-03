@@ -2,7 +2,7 @@ import axiosFetch from '@/api/axios';
 import { SUB_SERVICE_URL } from '@/api/subService';
 import Button from '@/components/cubes/Button';
 import ListSkeleton from '@/components/skeletons/ListSkeleton';
-import { SubServiceType } from '@/types/subService';
+import { SubServiceType } from '@/types/SubService';
 import { isEmpty } from '@/utils/helpers';
 import clsx from 'clsx';
 import  Router  from 'next/router';

@@ -5,7 +5,7 @@ import TextField from '@/components/cubes/TextField';
 import CustomerSelect from '@/components/selects/customerSelect';
 import SubServiceSelect from '@/components/selects/subServiceSelect';
 import { CustomerType } from '@/types/Customer';
-import { SubServiceType } from '@/types/subService';
+import { SubServiceType } from '@/types/SubService';
 import { toFaCurrency } from '@/utils/number';
 import React, { useEffect, useRef, useState } from 'react';
 import { toast } from 'react-toastify';

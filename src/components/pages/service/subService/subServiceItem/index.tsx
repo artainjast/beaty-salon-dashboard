@@ -1,5 +1,5 @@
 import { transformSubServiceData } from '@/transformers/subServiceTransformer';
-import { SubServiceType } from '@/types/subService';
+import { SubServiceType } from '@/types/SubService';
 import { toFaCurrency } from '@/utils/number';
 import React from 'react';
 

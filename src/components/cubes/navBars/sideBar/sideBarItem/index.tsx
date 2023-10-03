@@ -1,6 +1,6 @@
+import { Icon } from '@/components/cubes/Icon';
 import { MenuBarItem } from '@/types/MenuBar';
 import clsx from 'clsx';
-import Image from 'next/image';
 import Router, { useRouter } from 'next/router';
 import React, { useState } from 'react';
 
@@ -32,9 +32,7 @@ const SideBarItem = ({ menuBar, sideBarHandler }: Props) => {
       {menuBar.subMenu && menuBar.isActive !== false ? (
         <div>
           <div className='flex flex-row'>
-            <div className='h-7 w-7 ml-2 '>
-              <Image src={menuBar.logo ? menuBar.logo : ''} alt={''}  />
-            </div>
+              <Icon name={menuBar.logo ? menuBar.logo : 'home'} size={24} className='ml-2' />
             <p className={clsx('text-lg', { 'text-slate-500': isSubMenuExpand })} onClick={toggleMenu}>
               {menuBar.title}
             </p>

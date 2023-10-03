@@ -16,8 +16,6 @@ interface Props {
 
 const WrappedComponent = React.forwardRef(function TextField({ onChange, register , name, className, placeholder, pattern , type='text' , value , isTextArea = false , maxlength }: Props , ref: ForwardedRef<HTMLInputElement | HTMLTextAreaElement> , ...props ){
   const changeHandler = (e: any) => {
-    console.log(e.target.value);
-    
     onChange?.(e.target.value);
   };
   

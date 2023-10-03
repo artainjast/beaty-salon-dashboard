@@ -1,4 +1,4 @@
-import ReceptionAdd from '@/components/reception/add';
+import ReceptionAdd from '@/components/pages/reception/add';
 import React from 'react';
 
 const ReceptionAddPage = () => {

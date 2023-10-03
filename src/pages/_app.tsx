@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
     }
   },[])
   return (
-      <PageContainer className={styles.main}>
+      <PageContainer className={styles.main} {...Component}>
         <Component {...pageProps} />
         <ToastContainer rtl />
       </PageContainer>

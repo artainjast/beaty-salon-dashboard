@@ -1,4 +1,4 @@
-import AddCapacityForm from '../../../components/capacity/AddCapacityForm';
+import AddCapacityForm from '../../../components/pages/capacity/AddCapacityForm';
 
 const AdminDashboardPage = () => {
   return (

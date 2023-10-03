@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
-import logo from '../../../assets/images/logo.svg';
+import logo from '~/assets/images/logo.svg';
 import TextField from '@/components/cubes/TextField';
 import Button from '@/components/cubes/Button';
 import  axiosFetch  from '@/api/axios';
@@ -71,4 +71,7 @@ const Login = () => {
   );
 };
 
+Login.hideNavbar = true;
+
 export default Login;
+

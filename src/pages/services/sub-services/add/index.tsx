@@ -1,4 +1,4 @@
-import SubServiceAdd from '@/components/service/subService/add';
+import SubServiceAdd from '@/components/pages/service/subService/add';
 import React from 'react';
 
 const SubServiceAddPage = () => {

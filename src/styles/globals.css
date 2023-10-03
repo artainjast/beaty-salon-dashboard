@@ -5,29 +5,29 @@
 @font-face {
   font-family: 'Baloo';
   font-weight: 500;
-  src: url('../../assets/fonts/BalooBhaijaan2-Regular.ttf');
+  src: url('../../public/assets/fonts/BalooBhaijaan2-Regular.ttf');
 
 }
 @font-face {
   font-family: 'Baloo';
   font-weight: 600;
-  src: url('../../assets/fonts/BalooBhaijaan2-Medium.ttf');
+  src: url('../../public/assets/fonts/BalooBhaijaan2-Medium.ttf');
 
 }
 @font-face {
   font-family: 'Baloo';
   font-weight: 700;
-  src: url('../../assets/fonts/BalooBhaijaan2-SemiBold.ttf');
+  src: url('../../public/assets/fonts/BalooBhaijaan2-SemiBold.ttf');
 }
 @font-face {
   font-family: 'Baloo';
   font-weight: 800;
-  src: url('../../assets/fonts/BalooBhaijaan2-Bold.ttf');
+  src: url('../../public/assets/fonts/BalooBhaijaan2-Bold.ttf');
 }
 @font-face {
   font-family: 'Baloo';
   font-weight: 900;
-  src: url('../../assets/fonts/BalooBhaijaan2-ExtraBold.ttf');
+  src: url('../../public/assets/fonts/BalooBhaijaan2-ExtraBold.ttf');
 }
 
 :root {

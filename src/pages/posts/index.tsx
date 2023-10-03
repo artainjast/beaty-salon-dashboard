@@ -1,4 +1,4 @@
-import PostUploader from '@/components/posts/addPost';
+import PostUploader from '@/components/pages/posts/addPost';
 import React from 'react';
 
 const index = () => {

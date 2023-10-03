@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { DatePicker, LocalizationProvider, TimePicker } from '@mui/x-date-pickers';
 import { AdapterDateFnsJalali } from '@mui/x-date-pickers/AdapterDateFnsJalali';
-import TextField from '../cubes/TextField';
+import TextField from '../../cubes/TextField';
 import axiosFetch from '@/api/axios';
 
 const AddCapacityForm = () => {
